@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Summary {
+  id        String   @id @default(cuid())
+  type      String   // "book" | "chapter" | "story" | "theme" | "character"
+  key       String   // e.g., "genesis", "genesis-1", "creation-story"
+  tone      String   // "casual" | "balanced" | "scholarly"
+  depth     String   // "brief" | "medium" | "detailed"
+  content   String   @db.Text
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([type, key, tone, depth])
+  @@index([type, key])
+}
+
+model UserPreference {
+  id           String   @id @default(cuid())
+  visitorId    String   @unique
+  defaultTone  String   @default("balanced")
+  defaultDepth String   @default("medium")
+  defaultView  String   @default("books")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}

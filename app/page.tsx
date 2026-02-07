@@ -35,25 +35,6 @@ export default function HomePage() {
             </a>
           </div>
         </div>
-
-        {/* App Preview Placeholder */}
-        <div className="mt-16 md:mt-20 max-w-5xl mx-auto animate-fade-in stagger-4">
-          <div className="relative">
-            {/* Phone mockup placeholder */}
-            <div className="flex justify-center gap-4 md:gap-8">
-              <div className="w-48 md:w-64 h-96 md:h-[500px] bg-gradient-to-b from-[#DDE3D7] to-[#e8e6dc] rounded-[2.5rem] shadow-2xl flex items-center justify-center border-8 border-[#1a1a1a] relative overflow-hidden">
-                <div className="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-6 bg-[#1a1a1a] rounded-full"></div>
-                <div className="text-center p-6">
-                  <div className="w-16 h-16 bg-[#5c6857] rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                    <BookOpen className="h-8 w-8 text-white" />
-                  </div>
-                  <p className="text-sm text-[#5a5a5a] font-medium">App Screenshot</p>
-                  <p className="text-xs text-[#7B7B7B] mt-1">Coming Soon</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* Features Section */}

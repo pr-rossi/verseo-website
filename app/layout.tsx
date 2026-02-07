@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   title: "Verseo - Scripture, Simplified",
   description:
     "Study the Bible with AI-powered insights. Explore books, stories, themes, and characters with personalized summaries. Download for iOS and Android.",
+  icons: {
+    icon: [{ url: "/favicon.ico", sizes: "any" }, { url: "/icon.svg", type: "image/svg+xml" }],
+    apple: "/apple-icon.png",
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
